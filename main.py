@@ -75,9 +75,9 @@ raw_datasets = load_dataset(
     cache_dir=model_args.cache_dir,
     use_auth_token=True if model_args.use_auth_token else None,
 )
-dataset = load_dataset("wmt14",'de-en', cache_dir=f'{_current_path}/data/')
-print(dataset)
+# dataset = load_dataset("wmt14",'de-en', cache_dir=f'{_current_path}/data/')
+print(raw_dataset)
 print('>> train dataset sample')
-for row in dataset['train']:
+for row in raw_dataset['train']:
     print(row)
     break
